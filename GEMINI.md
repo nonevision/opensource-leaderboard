@@ -21,7 +21,7 @@ admin/              ← admin panel (separate webpack build)
 
 ## Deployment — The Only Path That Matters
 
-There is exactly one deployment path. Node.js + pm2.
+There is exactly one deployment path. Plain Node.js.
 
 ```bash
 git clone <repo-url>
@@ -31,8 +31,7 @@ cp src/server/config-example.json src/server/config.json
 npm run add       # installs deps for root + server + admin
 npm run build     # builds frontend + admin panel
 cd dist/server
-npm install pm2 -g
-pm2 start app.js --name "leaderboard"
+node app.js
 ```
 
 Runs on port 8080. That's it.
@@ -84,7 +83,6 @@ See `REST-API.md` for full docs.
 - **jsonfile** — JSON file read/write
 - **socket.io** / **socket.io-client** — real-time updates
 - **webpack 4** — frontend bundling
-- **pm2** — process manager for production
 
 ## What NOT To Do
 

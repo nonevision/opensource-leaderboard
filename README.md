@@ -49,8 +49,7 @@ npm run add
 # 4. Build and run
 NODE_OPTIONS=--openssl-legacy-provider npm run build
 cd dist/server
-npm install pm2 -g
-pm2 start app.js --name "leaderboard"
+node app.js
 ```
 
 Open **http://localhost:8080** — you're done.

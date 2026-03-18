@@ -54,8 +54,7 @@ cp src/server/config-example.json src/server/config.json
 npm run add
 npm run build
 cd dist/server
-npm install pm2 -g
-pm2 start app.js --name "leaderboard"
+node app.js
 ```
 
 Serves on port 8080.
